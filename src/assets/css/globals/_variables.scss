@@ -1,0 +1,43 @@
+// --------------------
+// VARIABLES
+//---------------------
+
+// Colors
+$white: #FFFFFF;
+$black: black;
+$body-color: #231F20;
+$primary: #59AE62;
+$secondary: #70D8FF;
+$light: #f4f4f4;
+$dark: #231F20;
+$yellow:#FEC37D;
+$green:#1FB259;
+$gray:#CECBDA;
+
+// Header
+$headerheight: 150px; // Change to approximate header height - adds padding to first section
+$header-starting-width: 280px;
+$header-scrolled-width: 200px;
+$headerbg: #fff; // Header scrolled background color.
+
+// Tables
+$bg-table-active-color: #42c7b3;
+
+// Slider
+$slider-title-color: #ffffff;
+$slick-dot-color: #ffffff;
+$slick-active-dot-color: #42c7b3;
+
+// Grid settings
+$grid-breakpoints: (
+	xs: 0,
+	sm: 576px,
+	md: 768px,
+	lg: 992px,
+	xl: 1200px,
+	xxl: 1400px,
+);
+
+// keeps gutters consistent
+$grid-gutter-width: 30px;
+$container-padding-x: 15px;

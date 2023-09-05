@@ -1,0 +1,104 @@
+.section-table {
+	h2{
+		margin-bottom:30px;
+		@include media-breakpoint-up(md) {
+			margin-bottom: 50px;
+		}
+	}
+	.img-logo{
+		max-width: 80px;
+		display: block;
+		margin: 0 auto;
+		@include media-breakpoint-up(md) {
+			max-width: 160px;
+		}
+	}
+	.table{
+		background-color: $white;
+		border-radius: 5px;
+		border: 2px solid #DCDCDC;
+		background: #FFF;
+		font-size: 1.6rem;
+		color: #2C2D2A;
+		margin: 0 0 70px;
+		@include media-breakpoint-up(md) {
+			font-size: 2.0rem;
+		}
+
+		tr {
+			border-bottom: 1px solid rgba(0, 0, 0, 0.09);
+
+			th,
+			td {
+				width: 20%;
+				padding: 10px;
+				vertical-align: middle;
+				border-top: none;
+
+				@include media-breakpoint-up(md) {
+					padding: 20px;
+				}
+
+				img.icon,
+				svg.icon {
+					max-width: 20px;
+
+					@include media-breakpoint-up(md) {
+						max-width: 30px;
+					}
+				}
+
+				&.first-column {
+					width: 40%;
+					@include media-breakpoint-up(md) {
+						padding: 0 90px 0 40px;
+						height: 100px;
+					}
+				}
+
+				&.active-cell {
+					position: relative;
+					background-color: $primary;
+
+					i {
+						color: $white;
+					}
+				}
+			}
+
+			th,
+			&:last-child td {
+				&.active-cell:before {
+					content: '';
+					position: absolute;
+					width: 100%;
+					background-color: $primary;
+					left: 0;
+					height: 40px;
+				}
+			}
+
+
+			&:last-child td.active-cell:before {
+				bottom: -30px;
+				border-radius: 0 0 15px 15px;
+				box-shadow: 0 10px 10px rgba(0,0,0,0.2);
+				@include media-breakpoint-up(md) {
+					border-radius: 0 0 31px 31px;
+				}
+			}
+
+			th {
+				&.active-cell {
+					&:before {
+						top: -30px;
+						border-radius: 15px 15px 0 0;
+						@include media-breakpoint-up(md) {
+							border-radius: 31px 31px 0 0;
+						}
+					}
+				}
+			}
+		}
+	}
+}

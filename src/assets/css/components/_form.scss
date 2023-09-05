@@ -1,0 +1,158 @@
+form {
+	input[type='text'],
+	input[type='email'],
+	input[type='tel'],
+	input[type='number'],
+	textarea,
+	select {
+		width: 100%;
+		padding: 20px 40px 20px 30px;
+		border: none;
+		margin-bottom: 15px;
+		border-radius: 10px;
+		font-size: 2rem;
+		line-height: 1.25;
+		outline: none;
+
+		&:-internal-autofill-selected {
+			background-color: $white !important;
+			background-image: none !important;
+			color: -internal-light-dark-color(#2C2D2A, white) !important;
+		}
+		&:focus{
+			color:#2C2D2A;
+			box-shadow:inset 0px 0px 0  2px $primary;
+		}
+
+		&::-webkit-input-placeholder {
+		  color: #2C2D2A;
+		}
+
+		&:-ms-input-placeholder {
+		  color: #2C2D2A;
+		  opacity: 1;
+		}
+
+		&::placeholder {
+		  color:#2C2D2A;
+		}
+	}
+	.legend{
+		display: block;
+		margin-bottom: 20px;
+	}
+	._form-fieldset {
+		flex-flow: row wrap;
+		margin-bottom: 15px;
+	}
+	._checkbox-radio{
+		display: flex;
+		flex-flow: row wrap;
+		margin: 0 15px 15px 0;
+		position: relative;
+		padding-left: 30px;
+	}
+	input[type='radio'],
+	input[type='checkbox'] {
+		min-width: 20px;
+		min-height: 20px;
+		margin: 0 10px 0 0 ;
+	}
+	&:focus{
+			background: $white;
+			color:$body-color;
+	}
+
+
+	textarea {
+		height: 210px !important;
+	}
+
+	select {
+		appearance: none;
+	}
+
+	label{
+		display: block;
+		position: relative;
+	}
+
+	.form-group {
+		position: relative;
+		width: 100%;
+		margin-bottom: 0;
+		line-height: 1;
+		input[type='checkbox']{
+			position: absolute;
+			top: 0;
+			left: 0;
+		}
+
+		.icon {
+			position: absolute;
+			top: 20px;
+			left: 15px;
+			width: 25px;
+			height: 25px;
+			z-index: 10;
+
+			svg,img{
+				width: 100%;
+				height: auto;
+			}
+
+			@include media-breakpoint-up(md) {
+				left: 25px;
+			}
+		}
+	}
+
+	label.error,
+	.field-error {
+		display: block;
+		margin-bottom: 20px;
+		margin-top: 0px;
+		color: red;
+		font-size: 1.5rem;
+		text-align: left;
+	}
+
+	.form-messages {
+		text-align: center;
+		font-size: 1.6rem;
+
+		&.success {
+			color: green;
+		}
+
+		&.error {
+			color: red;
+		}
+	}
+
+	.iti{
+		width: 100%;
+	}
+	.arrow-down{
+		cursor: pointer;
+		position: relative;
+		&:after {
+			content: '';
+			width: 0;
+			height: 0;
+			border-style: solid;
+			border-width: 12px 8px 0;
+			border-color:#2C2D2A transparent transparent;
+			transition: border-color 300ms ease, transform 300ms ease;
+			display: block;
+			position: absolute;
+			right: 20px;
+			top: 50%;
+			transform: translateY(-50%);
+			margin-top: -5px;
+			pointer-events:none;
+		}
+	}
+}
+
+

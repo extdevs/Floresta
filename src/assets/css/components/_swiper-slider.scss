@@ -1,0 +1,156 @@
+.swiper {
+	&.mobile {
+		@include media-breakpoint-up(lg) {
+			pointer-events: none;
+
+			.swiper-slide {
+				flex-shrink: unset;
+			}
+		}
+	}
+
+	section.brands & {
+		.swiper-wrapper {
+			@include media-breakpoint-up(lg) {
+				transform: unset !important;
+			}
+		}
+	}
+	&.reviews{
+		position: relative;
+		padding: 0 35px 70px;
+		margin-bottom: 20px;
+		@include media-breakpoint-up(lg) {
+			padding: 0 70px 70px;
+		}
+		.swiper-slide{
+			box-shadow: 0 0 5px rgba(0,0,0,0.01);
+			@include media-breakpoint-up(lg) {
+				transform: scale(0.95);
+			}
+			&.swiper-slide-active{
+				@include media-breakpoint-up(lg) {
+					transform: scale(1.05) !important;
+				}
+			}
+		}
+	}
+
+	.swiper-slide {
+		transition: 0.4s;
+		background: $white;
+		padding:40px;
+		border-radius: 25px;
+		position: relative;
+		p{
+			@include media-breakpoint-up(lg) {
+				padding-right: 20px;
+			}
+		}
+
+		.play-button p {
+			max-width: 100%;
+		}
+
+		&.extra-slide {
+			@include media-breakpoint-up(lg) {
+				display: none;
+			}
+		}
+	}
+
+	&.gallery-thumbs {
+		.swiper-slide {
+			opacity: 0.9;
+		}
+
+		.swiper-slide-thumb-active {
+			opacity: 1;
+		}
+	}
+}
+
+section .swiper-pagination { 
+	position: relative;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin: 2rem 0 0;
+
+	.swiper-pagination-bullet {
+		outline: none;
+		width: 1.5rem;
+		height: 1.5rem;
+		border-radius: 1.8rem;
+		background: $secondary !important;
+		opacity: 1;
+		margin: 0 4px;
+		cursor: pointer;
+
+		&.swiper-pagination-bullet-active {
+			background: $primary !important;
+		}
+	}
+}
+
+.swiper-nav{
+	position: absolute;
+	left: 50%;
+	transform: translate(-50%);
+	width: 120px;
+	bottom: 0;
+	
+}
+
+.swiper-button-prev,
+.swiper-button-next {
+	outline: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 42px !important;
+	height: 42px !important;
+	transition: 0.4s;
+	cursor: pointer;
+	@include media-breakpoint-up(md) {
+		display: inline-block;
+		margin: 0;
+		top: 0;
+	}
+
+	&:after {
+		display: none;
+	}
+
+	img,
+	svg {
+		width: 100%;
+		height: auto;
+		path{
+			stroke:$black;
+			opacity: 1;
+		}
+		&:hover{
+			path{
+				stroke:$gray;
+			}
+		}
+	}
+
+.swiper-button-prev {
+	left: 0px;
+
+	@include media-breakpoint-up(md) {
+		left: -3rem;
+	}
+}
+
+	.swiper-button-next {
+		right: 0px;
+
+		@include media-breakpoint-up(md) {
+			right: -3rem;
+		}
+	}
+}
