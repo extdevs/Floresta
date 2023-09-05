@@ -24,15 +24,7 @@ form {
 			box-shadow:inset 0px 0px 0  2px $primary;
 		}
 
-		&::-webkit-input-placeholder {
-		  color: #2C2D2A;
-		}
-
-		&:-ms-input-placeholder {
-		  color: #2C2D2A;
-		  opacity: 1;
-		}
-
+		
 		&::placeholder {
 		  color:#2C2D2A;
 		}

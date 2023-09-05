@@ -6,5 +6,5 @@ import './booking.scss';
  */
 
 contentLoaded(window, () => {
-    initModals();
+    //initModals();
 })
